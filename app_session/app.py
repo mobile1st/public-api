@@ -85,6 +85,7 @@ class AppSession(object):
         self.app = app
         self.app.sa = self
         self.engine = create_engine(app.config[self.SQLALCHEMY_DATABASE_URI], poolclass=NullPool, echo=self.echo)
+        print("DB CONNECTED==============")
         self.Session = sessionmaker(bind=self.engine)
         self.app.before_request(self._register_session)
         self.app.after_request(self._commit_after_request)
