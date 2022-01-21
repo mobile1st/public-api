@@ -20,6 +20,7 @@ class AxieNftEvent(Base):
 
     seller = relationship("AxieUser", foreign_keys=[seller_id])
     buyer = relationship("AxieUser", foreign_keys=[buyer_id])
+    nft = relationship("AxieNft")
 
     def __repr__(self):
         return "AxieNftEvent({})".format(self.id)

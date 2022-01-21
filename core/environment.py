@@ -13,6 +13,6 @@ class ENV:
         host = self.get_value("PROD_DB_HOST")
         user = self.get_value("PROD_DB_USER_NAME")
         db_pass = self.get_value("PROD_DB_PASSWORD")
-        db_name = self.get_value("DB_NAME")
+        db_name = self.get_value("PROD_DB_NAME")
         db_port = self.get_value("DB_PORT")
         return f'mysql+pymysql://{user}:{db_pass}@{host}:{db_port}/{db_name}'

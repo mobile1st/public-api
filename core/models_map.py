@@ -3,20 +3,18 @@ from core import models as m
 
 modelsmap = {
     m.AxieNftEvent: [
-        "id",
-        "nft_id",
         "price",
         "price_usd",
-        "seller_id",
-        "buyer_id",
+        # "seller_id",
+        # "buyer_id",
         "created_date",
         "event_date",
         "block_chain_id",
         "seller",
-        "buyer"
+        "buyer",
+        "nft"
     ],
     m.AxieNft: [
-        "id",
         "axie_id",
         "name",
         "avatar",
@@ -36,12 +34,11 @@ modelsmap = {
         "childs"
     ],
     m.AxieUser: [
-        "id",
-        "account_id",
+        # "account_id",
         "name",
         "ronin_address",
-        "eth_address",
-        "loom_address",
-        "tomo_address"
+        # "eth_address",
+        # "loom_address",
+        # "tomo_address"
     ]
 }
